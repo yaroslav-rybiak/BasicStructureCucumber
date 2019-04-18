@@ -11,7 +11,10 @@ import org.testng.annotations.BeforeSuite;
 
 import java.util.concurrent.TimeUnit;
 
-@CucumberOptions(features = "src/test/java/features", glue = "steps")
+@CucumberOptions(
+    features = "src/test/java/features",
+    glue = "steps",
+    format = "json:build/test-results/cucumber.json")
 public class TestRunner extends AbstractTestNGCucumberTests {
 
     protected static WebDriver driver;
